@@ -1,0 +1,89 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+
+
+/*add*/
+
+#add-container {
+	padding:20px 0 0 20px;
+}
+#add-container li {
+	height: 50px;
+	line-height: 50px;
+	color: #1C24E1;
+	font-weight: 900;
+}
+.add-title h1 {
+	color: #DE32DE;
+	width: 260px;
+}
+.add-lis span {
+	font-size: 22px;
+}
+.add-lis input {
+	padding-left: 2px;
+	width: 254px;
+	height: 26px;
+	font-size: 18px;
+	color: rgba(1, 1, 1, 0.6);
+	border: 2px solid #cccccc;
+	border-radius: 5px;
+}
+#hidden-file {
+	margin: 22px 0 0 77px;
+	position: absolute;
+	width: 95px;
+	height: 95px;
+	opacity: 0;
+}
+.add-icon {
+	margin: -30px 0 0 145px;
+	width: 96px;
+	height: 96px;
+	border: 2px solid #cccccc;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 96px;
+	font-size: 50px;
+}
+.add-submit {
+	margin: 75px 0 0 10px;
+}
+.add-submit input {
+	width: 60px;
+	height: 30px;
+	background: #0055E6;
+	color: #ffffff;
+	font-size: 16px;
+	border: 0;
+	border-radius: 5px;
+}
+#add-cancle {
+	margin: 0 102px 0 70px;
+}
+.add-img {
+	display: none;
+	margin: 22px 0 0 78px;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	z-index: -3;
+	border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+

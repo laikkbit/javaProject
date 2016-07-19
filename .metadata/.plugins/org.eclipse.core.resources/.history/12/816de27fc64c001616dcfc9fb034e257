@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#bodybg { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+#bodybg .stretch { 
+	position: absolute;
+    width:100%;
+    height:100%;
+}
+.login {
+	position: fixed;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 500px;
+	height: 500px;
+	background: url(../image/bag.png);
+	border-radius:  50px;
+	text-align: center;
+}
+.welcome {
+	margin: 0 auto;
+	padding-top: 40px;
+	width: 200px;
+	height: 80px;
+	text-align: center;
+	font-family: STXINGKA;
+	font-size: 75px;
+}
+.who {
+	margin-top: 10px;
+	width: 500px;
+	height: 70px;
+	text-align: center;
+	color: #00FCFE;
+	font-family: STXINGKA;
+	font-size: 45px;
+}
+.input-div {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 400px;
+	height: 50px;
+	line-height: 50px;
+}
+.input-div > span {
+	font-family: STXINGKA;
+	padding-left: 20px;
+	font-size: 33px;
+	line-height: 50px;
+}
+.input-div > input {
+	width: 200px;
+	height: 33px;
+	font-size: 19px;
+	line-height: 37px;
+	border-radius: 7px;
+}
+.input-div > img {
+	position: absolute;
+	right: 20px;
+	margin: 5px 0 0 0; 
+	width: 40px;
+	height: 40px;
+}
+.user-img {
+	display: none;
+}
+.psd-img {
+	display: none;
+}
+.button {
+	margin-top: 35px;
+	width: 100px;
+	height: 40px;
+	font-size: 27px;
+	border: none;
+	border-radius: 10px;
+	font-family: STXINGKA;
+	background: #51A4D8;
+}
+#have-user {
+	font-style: italic;
+	font-size: 25px;
+}
+#regist {
+	margin-left: 10px;
+}
+
+
+

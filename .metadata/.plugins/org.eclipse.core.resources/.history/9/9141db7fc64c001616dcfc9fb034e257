@@ -1,0 +1,50 @@
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	overflow: hidden;
+}
+li {
+	list-style: none;
+}
+#app {
+	padding-top: 20px;
+	height: 10000px;
+	border-right: 1px solid #cccccc;
+}
+#app a,
+#app li {
+	display: block;
+	width: 110px;
+	height: 110px;
+}
+#app a {
+	margin-left: 55px;
+}
+#app .index {
+	margin-left: -55px;
+	width: 220px;
+	height: 100px;
+	background: url(../image/index.png);
+}
+#app .add {
+	background: url(../image/add.png);
+}
+#app .del {
+	background: url(../image/del.png);
+}
+#app .sear {
+	background: url(../image/sear.png);
+}
+#app .chan {
+	background: url(../image/chan.png);
+}
+
+
+
+
+
+

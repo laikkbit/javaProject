@@ -1,0 +1,24 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
+
+import db.DbUtil;
+
+import modle.DeptModle;
+
+public class XmlDao {
+	
+	DbUtil db=new DbUtil();
+	
+	public List<DeptModle> getMessage(){
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		List<DeptModle> result=new ArrayList<DeptModle>();
+		
+		
+		return result;
+	}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>add</title>
+	<link rel="stylesheet" type="text/css" href="../style/indexRight.css">
+</head>
+<body>
+	<div id="add-container">
+		<ul>
+			<li class="add-title">
+				<h1>
+					图书添加
+				</h1>
+			</li>
+			<!-- <form action="" method="POST"> -->
+				<li class="add-lis">
+					<span>书名： </span>
+					<input type="text" name="bookName" placeholder=" 请输入书名">
+				</li>
+				<li class="add-lis">
+					<span>作者： </span>
+					<input type="text" name="bookAuthor" placeholder=" 请输入作者">
+				</li>
+				<li class="add-lis" id="add-img">
+					<span>封面： </span>
+					<input type="file" name="bookCover" accept="image/*" placeholder=" 请添加封面" id="hidden-file">
+					<img src="" class="add-img">
+					<div class="add-icon">
+						+
+					</div>
+				</li>
+				<li class="add-submit">
+					<input type="submit" value="提交" name="submit">
+				</li>
+			<!-- </form> -->
+		</ul>
+	</div>
+
+	<script>
+	
+		var addImgInput = document.querySelector('#hidden-file');
+		var imgCon =document.querySelector('.add-img');
+
+		function getFileUrl(sourceId) {
+			var url; 
+			if (navigator.userAgent.indexOf("MSIE") >= 1) {
+				 // IE 
+				url = sourceId.value; 
+			} else if (navigator.userAgent.indexOf("Firefox") > 0) {
+				 // Firefox 
+				url = window.URL.createObjectURL(sourceId.files.item(0)); 
+			} else if (navigator.userAgent.indexOf("Chrome") > 0) { 
+				// Chrome 
+				url = window.URL.createObjectURL(sourceId.files.item(0)); 
+			}
+				return url;
+		}
+		addImgInput.onchange = function () {
+			var addImgPath = getFileUrl(addImgInput);
+			console.log(addImgPath);
+			imgCon.src = addImgPath;
+			imgCon.style.display = 'inline';
+			document.querySelector('.add-icon').innerHTML = '';
+		}
+
+
+	</script>
+</body>
+</html>
+

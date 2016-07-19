@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录失败</title>
+	<link rel="shortcut icon" href="../image/book.jpg">
+	<link rel="stylesheet" type="text/css" href="../style/loginWrong.css">
+</head>
+<body>
+
+<!-- <img src="../image/7310f459252dd42a764e8301053b5bb5c8eab894.jpg">
+<img src="../image/u=145879311,1674646683fm=21gp=0.jpg">
+<img src="../image/20160406183253.png">
+ -->
+<img src="../image/00105cc0b0be10d406dc15.jpg" class="bg">
+<p class="text">登录失败</p>
+<p class="auto"><span></span>秒都自动跳转</p>
+<div class="fail">
+	<div class="img1" id="a"></div>
+</div>
+
+<script>
+(function () {
+	var img = document.querySelector('#a');
+	var arr = ['img1', 'img2', 'img3'];
+	var i = 0, time = 3;
+	setInterval(function () {
+		if (i == 2) {
+			i = 0;
+		} else {
+			i ++;
+		}
+		img.className = arr[i];
+	}, 170);
+	var timeLeft = document.querySelector('.auto span');
+	setInterval(function () {
+		timeLeft.innerHTML = time;
+		time --;
+		if (timeLeft.innerHTML == 0) {
+			window.location = './login.html';
+		}
+	}, 1000);
+})();
+</script>
+</body>
+</html>

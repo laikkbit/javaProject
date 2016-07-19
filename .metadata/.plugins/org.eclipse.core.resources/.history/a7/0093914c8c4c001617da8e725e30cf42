@@ -1,0 +1,29 @@
+package service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
+import modle.DeptModle;
+
+import dao.XmlDao;
+
+public class Operation {
+	
+	public static void main(String[]args){
+		XmlDao dao=new XmlDao();
+		List<DeptModle> dp=new ArrayList<DeptModle>();
+		dp=dao.getMessage();
+		Document doc=DocumentHelper.createDocument();
+		Element dept=doc.addElement("dept");
+		Element id=dept.addElement("id");
+		Element name=id.addElement("name");
+		Element loc=id.addElement("loc");
+		for(DeptModle e:dp){
+			id.setText(null);
+		}
+	}     
+}

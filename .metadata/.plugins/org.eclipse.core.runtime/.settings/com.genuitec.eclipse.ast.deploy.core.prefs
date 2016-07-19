@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+tomcat7Server.book_manager.IEARProjectName=
+tomcat7Server.book_manager.altContextRoot=
+tomcat7Server.book_manager.contextRoot=/book_manager
+tomcat7Server.book_manager.deployIsOverProject=false
+tomcat7Server.book_manager.deploymentPath=F\:\\Tomcat7\\apache-tomcat-7.0.68\\webapps\\book_manager
+tomcat7Server.book_manager.isDeployed=true
+tomcat7Server.book_manager.isExploded=true
+tomcat7Server.book_manager.isUptoDate=true
+tomcat7Server.book_manager.noFileCopy=false
+tomcat7Server.book_manager.shouldBackup=false
+tomcat7Server.book_manager.shouldOverwrite=false
+tomcat7Server.book_manager.type=WebDeployment

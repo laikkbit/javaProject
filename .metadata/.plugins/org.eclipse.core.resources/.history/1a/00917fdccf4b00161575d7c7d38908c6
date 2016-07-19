@@ -1,0 +1,43 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import db.DbUtil;
+
+import modle.DeptModle;
+
+public class XmlDao {
+	
+	DbUtil db=new DbUtil();
+	
+	@SuppressWarnings("null")
+	public List<DeptModle> getMessage(){
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		List<DeptModle> result=new ArrayList<DeptModle>();
+		conn=db.getConnection();
+		String sql="select * from dept";
+		try{
+			ptmt=conn.prepareStatement(sql);
+			ResultSet rs=ptmt.executeQuery();
+			DeptModle dept=null;
+			while(rs.next()){
+				dept.setId(rs.getInt("id"));
+				dept.setMessage(rs.getString("name"));
+				dept.setMessage(rs.getString("message"));
+				result.add(dept);
+			}
+			rs.close();
+			ptmt.close();
+			conn.close();
+		}catch(SQLException e){
+			System.out.println("²Ù×÷Ê§°Ü");
+		}		
+		return result;
+	}
+}
