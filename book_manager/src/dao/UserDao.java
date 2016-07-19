@@ -2,9 +2,10 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.resource.cci.ResultSet;
+
 
 import db.DbUtil;
 
@@ -17,20 +18,20 @@ public class UserDao {
             String sql="select password from user_message where username=? ";
             PreparedStatement ptmt=null;
 		try {
+		    System.out.println(conn == null);
 			ptmt = conn.prepareStatement(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Î´Öª´íÎó");
 		}
 		String ps=null;
             try {
 				ptmt.setString(1, username);
-				ResultSet rs=(ResultSet) ptmt.executeQuery();
+				ResultSet rs=  ptmt.executeQuery();
 				while(rs.next()){
 					ps=rs.getString("password");
 				}
-			} catch (SQLException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				System.out.println("yigeweizhidecuowu");
 			}
             if (password.equals(ps))
             	return true;
